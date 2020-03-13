@@ -1,1 +1,2 @@
 # Password-Generator
+In this project we were given a styled html sheet, as well as a mostly blank javascript page. In the user story, we were told to use javascript, to create a function that could take in how many characters the user wants, as well as having them choose any combination of upper and lower case letters, special characters and numbers, to create and original password. Although I am fairly certain I made this project far harder and complicated than it needed to be, I am happy with the result. 

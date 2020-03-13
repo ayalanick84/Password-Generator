@@ -16,15 +16,12 @@ function writePassword() {
 // which meets the requirements in the instructions.
 
 
-//  allOkay = "abcdefghivjklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()"
-//  noLower = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()"
-//  noUpper = "abcdefghivjklmnopqrstuvwxyz1234567890!@#$%^&*()"
-//  numSpecial = "1234567890!@#$%^&*()"
-//  allLetters = "abcdefghivjklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
+// Heres the actual function to generate the password
 function generatePassword() {
   var length = prompt("How long would you like your password to be?")
+  // put whole thing in this that it has the number parameter
   if (length > 7 && length < 129) {
+    // All my prompts and all of the possibilities that the user could choose
     passLower = confirm("Would you like lower case letters?")
     passUpper = confirm("Would you like upper case letters?")
     passNumber = confirm("Would you like numbers in your password?")
@@ -51,7 +48,7 @@ function generatePassword() {
     ]
     retVal = "";
 
-
+    // repeating it for every single combinantion
     if (passLower === true && passUpper === true && passNumber === true && passSpecial === true) {
       for (var i = 0, n = components[0].length; i < length; ++i) {
         retVal += components[0].charAt(Math.floor(Math.random() * n));
@@ -147,7 +144,8 @@ function generatePassword() {
     alert("Please enter a number between 8 and 128")
 
   } /*If statement*/
-}/*function*/
+}/*function */
+// actually call the function and have it put the password on the screen
 document.getElementById("generate").onclick = function () { password.generatePassword() };
 
 
